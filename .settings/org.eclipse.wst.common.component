@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="trab4bim148451">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="context-root" value="trab4bim148451"/>
+        <property name="java-output-path" value="/trab4bim148451/bin"/>
+    </wb-module>
+</project-modules>
