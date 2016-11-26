@@ -1,8 +1,6 @@
 package br.semicheche.repository;
 
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.persistence.Query;
 

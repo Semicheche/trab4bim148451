@@ -46,10 +46,10 @@ public class JPAFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		
-		request.setAttribute("entityManager", entityManager);
-		
+	    request.setAttribute("entityManager", entityManager);
+	    
 		entityManager.getTransaction().begin();
 		
 		chain.doFilter(request, response);
@@ -75,8 +75,8 @@ public class JPAFilter implements Filter {
 	 * 
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-
-		this.entityManagerFactory = Persistence.createEntityManagerFactory(this.persistence_unit_name);
+		
+		this.entityManagerFactory = Persistence.createEntityManagerFactory(persistence_unit_name);
 		
 	}
 

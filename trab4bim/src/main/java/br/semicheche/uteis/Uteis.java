@@ -1,12 +1,12 @@
 package br.semicheche.uteis;
 
-import java.io.Serializable;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletRequest;
+
+import org.hibernate.dialect.Sybase11Dialect;
 /**
  * 
  * @author lucianosemicheche

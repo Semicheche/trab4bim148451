@@ -93,7 +93,7 @@ public class UsuarioController implements Serializable {
  
 			if(usuarioEntity!= null){
  
-				usuarioModel.setSenha(usuarioEntity.getSenha());
+				usuarioModel.setSenha(null);
 				usuarioModel.setCodigo(usuarioEntity.getCodigo());
  
  
