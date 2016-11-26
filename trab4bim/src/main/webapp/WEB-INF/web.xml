@@ -22,4 +22,9 @@
   <session-config>
     <session-timeout>30</session-timeout>
   </session-config>
+    <!-- Registrando a tag lib que criamos -->
+  <context-param>
+     <param-name>facelets.LIBRARIES</param-name>
+     <param-value>/WEB-INF/LocalDateTimeConverter-taglib.xml</param-value>
+  </context-param>
 </web-app>
