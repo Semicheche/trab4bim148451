@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pessoas>
+  <pessoa>
+    <nome>Luciano Semicheche</nome>
+    <sexo>M</sexo>
+    <email>lucianosemicheche@gmail.com</email>
+    <endereco>Cascavel, PR, Rua Castro Alves N°10</endereco>
+  </pessoa>
+    <pessoa>
+    <nome>Lucas  Silva</nome>
+    <sexo>M</sexo>
+    <email>RafaelLimaMelo@dayrep.com</email>
+    <endereco>Beco dos Chagas, 1264</endereco>
+  </pessoa>
+    <pessoa>
+    <nome>Karin Correia Ferreira</nome>
+    <sexo>F</sexo>
+    <email>KaCorreiaFerreira@jourrapide.com</email>
+    <endereco>Praça Plácido de Castro, 1783</endereco>
+  </pessoa>
+</pessoas>
