@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:format="http://ciceroednilson.com.br/LocalDateTimeConverter"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+ 
+<h:head>
+</h:head>
+ 
+<ui:composition template="/template/layoutBase.xhtml">
+ 
+	<ui:define name="content">
+ 
+		<div style ="padding-left:25%;">
+ 
+			<h:form id="form-consulta-carousel">
+ 
+			<p:carousel value="#{consultarPessoaCarouselController.pessoas}" 
+						var="pessoa"
+						responsive="true"
+						itemStyle="height:250px;"
+						numVisible="3"
+						style="width:600px">
+ 
+			        	<div style="margin-left: 5px;">	            
+ 
+			            	<p><h:outputText value="Código: #{pessoa.codigo}" /></p>		 
+			            	<p><h:outputText value="Nome: #{pessoa.nome}" /></p>		            	 
+			            	<p><h:outputText value="Sexo: #{pessoa.sexo}" /></p>		            		 			
+			 				<p><h:outputText value="E-mail: #{pessoa.email}" /></p>
+			            	<p><h:outputText value="Endereço:#{pessoa.endereco}" /></p>	          
+			            	<p><h:outputText value="Origem Cadastro: #{pessoa.origemCadastro}" /></p>
+			            	<p><h:outputText value="Usuário que Cadastrou: #{pessoa.usuarioModel.usuario}" /></p>
+ 
+			            	<p>				
+					<h:outputText value="Data de Cadastro: "/>
+			            	<h:outputText value="#{pessoa.dataCadastro}">		            
+			            	<format:LocalDateTimeConverter pattern="dd/MM/yyyy HH:mm:ss"/>		            	
+			            	</h:outputText>
+			            	</p>
+ 
+			            </div>
+ 
+				    <f:facet name="footer">
+				         Total de registros: #{fn:length(consultarPessoaCarouselController.pessoas)}
+				    </f:facet>
+ 
+ 
+			</p:carousel>
+ 
+			</h:form>	
+ 
+		</div>
+ 
+	</ui:define>
+ 
+</ui:composition>
+</html>
