@@ -13,14 +13,20 @@ import javax.faces.convert.DateTimeConverter;
 /**
  * @author lucianosemicheche
  *
- *Clase utilizada para converter 
+ *Clase utilizada para Formartar a hora do LocalDateTime
  *
  */
 public class LocalDateTimeConverter extends DateTimeConverter {
 	
 	public static final String ID="br.semicheche.uteis.LocalDateTimeConverter"; 
 	
-	
+	/**
+	 * metodo sebrescrito da classe DateTimeConverter
+	 * 
+	 * @param facesContext, uiComponent, value
+	 * 
+	 * @return Object localDateTime
+	 */
 	@Override
 	public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {
  
@@ -45,9 +51,17 @@ public class LocalDateTimeConverter extends DateTimeConverter {
  
  
 	}
- 
-	  @Override
-	  public String getAsString(FacesContext facesContext, UIComponent uiComponent, Object value) {
+	
+	/**
+	 * methodo retorna a para superClasse um Date
+	 * 
+	 * @param facesContext, uiComponent, Object
+	 * 
+	 * @return facesContext, uiComponent, date
+	 * 
+	 */
+	@Override
+	public String getAsString(FacesContext facesContext, UIComponent uiComponent, Object value) {
  
 		  if(value == null)
 			  return super.getAsString(facesContext, uiComponent, value);

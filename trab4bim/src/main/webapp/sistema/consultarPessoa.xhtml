@@ -14,6 +14,19 @@
 <ui:composition template="/template/layoutBase.xhtml">
  
 	<ui:define name="content">
+		
+			
+		<p:dialog header="Editar cadastro de pessoa" 
+				  id="dialog-modal-editar" 
+		   		  widgetVar="dialog-modal-editar" 
+		   		  modal="true" 
+		   		  height="400px"
+		   		  width="550px">
+ 
+    		 <ui:include src="/sistema/editarPessoa.xhtml"/>
+ 
+ 
+		</p:dialog>
  
 		<h:form style="margin:auto;margin-left:2%;" id="form-consulta">
  
@@ -61,6 +74,13 @@
         				 </p:column>
  
         				 <p:column headerText="" style="width:25px;">
+        				 	
+        				 	   <p:commandButton icon="ui-icon-pencil" 
+        				    				    title="Editar Registro"                        					 
+                        					    ajax="true"                        					 
+                        					    actionListener="#{consultarPessoaController.editar(pessoa)}"
+                        					    oncomplete="PF('dialog-modal-editar').show();" 
+                        					    update="dialog-modal-editar"/>
  
         				 </p:column>
  
