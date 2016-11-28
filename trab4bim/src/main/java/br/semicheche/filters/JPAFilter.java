@@ -18,15 +18,16 @@ import javax.servlet.annotation.WebFilter;
  * 
  * Servlet Filter implementation class JPAFilter
  * 
- * JPAFilter sera ultilizado para verificar qualquer requisição para o faces servelets.	
+ * JPAFilter sera ultilizado para verificar qualquer requisição para o faces servlets.	
  * 
  */
-@WebFilter(servletNames = {"Faces Servelet"})
+@WebFilter(servletNames = {"Faces Servlet"})
 public class JPAFilter implements Filter {
 
 	private EntityManagerFactory entityManagerFactory;
 	
 	private String persistence_unit_name = "unit_app";
+
 
 	/**
 	 * @see Filter#destroy()
@@ -46,7 +47,7 @@ public class JPAFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityManager entityManager = this.entityManagerFactory.createEntityManager();
 		
 	    request.setAttribute("entityManager", entityManager);
 	    
@@ -76,7 +77,7 @@ public class JPAFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		
-		this.entityManagerFactory = Persistence.createEntityManagerFactory(persistence_unit_name);
+		this.entityManagerFactory = Persistence.createEntityManagerFactory(this.persistence_unit_name);
 		
 	}
 
